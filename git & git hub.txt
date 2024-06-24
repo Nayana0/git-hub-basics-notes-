@@ -1,0 +1,112 @@
+git & git hub
+
+git=> is an version control system
+
+version control is a tools that helps to track changes in code.
+
+git is popular, free open source, fast & scalable
+
+git hub=> is an website that allows developers to store & manage their code using git
+
+https://github.com
+
+we upload every work in the form of folders in git language we call it has repository
+1 repo
+2 commit 
+Readme is a special file, which will contain the summary of our project
+
+=>setting up git
+vs code
+windows (git bash)
+mac(terminal)
+git --version/v
+
+configuring git
+git config --global user.name "My Name"
+git config --global user.email "____@email.com"
+git config --list
+
+=> clone
+cloning a repo on our local machine
+git clone <-some link->
+cd=change directory->folder
+
+=.for hidden files ls -a
+to check .git which is git hub file
+
+=>status
+display the state of the code
+git status
+
+=> untracked=new files that doesn't yet track  |
+=> modified=changed                           |
+=> staged=file is ready to be committed       } add (staged)->commit (unchanged)
+=> unmodified=unchanged                       | 
+
+=> add-adds new or changed files in our working directory to the git staging area
+git add <-file name->
+if there are so many files git add .
+
+=>commit-it is the record of change
+git commit -m "meaningful message"
+
+=>push command
+push-upload local repo content to remote repo
+git push origin main
+            |     |
+         default branch
+           |
+(goes to remote repo i.e., githun copy we named it has origin)
+
+=>init command
+init-used to create a new git repo
+git init
+git remote add origin <- link ->
+git remote -v (to verify remote)
+git branch    ( to check branch) master branch(default)
+git branch -M main (to rename branch)
+git push -u origin main
+
+=> git branch
+=> branch command
+git branch (to check branch)
+git branch -M main (to rename branch)
+git checkout <- branch name -> (to navigate)
+git checkout -b <- new branch name -> (to create new branch)
+git branch -d <- branch name -> (to dlt branch)
+
+=.git push origin <- branch name ->
+                                                                                    1    2   3   4
+=> merging code                                                                     o----o---o---o
+way1                                                                                |            |  
+git diff <- branch name -> (to compare commits, branch, files & more)   o-----o-----o----o---o---o
+git merge <- branch name -> (to merge 2 branches)                        1    2     3    4   5   6->merging point
+
+way2
+create a PR-pull request-> it lets us tell others abt changes we pushed to a branch in a repo on git hub
+
+=>pull command
+git pull origin main
+  this is used to fetch & download content from a remote repo and immediately update the local repo to match that content
+
+=>resolving merge conflicts
+an event tht takes place when git is unable to automatically resolved difference in code b/w 2 commits
+
+=>undo ing changes
+1.staged change
+git reset
+git reset <- file name ->
+
+2. committed changes(for one commit)
+git reset HEAD-1
+it makes prev file as a head by dlting current file
+
+3.commited changes (for many commits)
+git reset <- commit hash ->
+git reset --head<- commit hash ->  hash is a code, it will be unique
+
+=>fork- it is a new repo tht shares code & visibility settings with the original "upstream" repo.
+fork is a rough copy
+
+
+
